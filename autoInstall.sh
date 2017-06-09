@@ -6,7 +6,7 @@ read choice
 
 case $choice in
 	1)
-		echo "#############  U choose ubuntu in 14.04 Server   ##############"
+		echo "############# Choose Ubuntu 14.04 Server   ##############"
 		echo "Enter the iso location"
 		read loc
 		if [ -f "$loc" ]
@@ -116,9 +116,8 @@ case $choice in
 				read password2
 				printf "\n Enter the hostname::::::::"
 				read hostname
-				echo "######################################################################
-################## preseed by aditya (M150102CS) #####################
-######################################################################
+
+echo "######################################################################
 \n# General
 \n####################################################################
 ## Options to set on the command line
