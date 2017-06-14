@@ -14,3 +14,10 @@ rsync -arvz -e 'ssh -p <port-number>' --progress --delete user@remote-server:/pa
 
 # Remote server
 rsync -arvz -e 'ssh -p <port-number>' --progress --delete /path/to/local/file user@backup-server:/path/to/backup
+
+
+
+while true
+  do rsync -arvz -e 'ssh -p 22' --progress --delete user@remote-server:/path/to/remote/folder /path/to/local/folder
+  sleep 60
+done
