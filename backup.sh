@@ -8,6 +8,7 @@ sudo service sshd Restart
 # Sync files/folders using Rsync with non-standard ssh port
 rsync -arvz -e 'ssh -p <port-number>' --progress --delete user@remote-server:/path/to/remote/folder /path/to/local/folder
 ## Backup after a predefined time
+## Paste the below command by running - "crontab -e"
 5 * * * * rsync -arvz -e 'ssh -p <port-number>' --progress --delete user@remote-server:/path/to/remote/folder /path/to/local/folder
 
 
