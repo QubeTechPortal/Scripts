@@ -17,10 +17,10 @@ DISK_GB=$4
 VCPUS=$5
 
 if [ "$OS" == "centos-6.5-64" ] ; then
-        LOCATION="http://mirror.i3d.net/pub/centos/6.5/os/x86_64/"
+        LOCATION="http://mirror.i3d.net/pub/centos/6.9/os/x86_64/"
 	EXTRA_ARGS="ks=http://ostolc.org/pxe/centos-6.5-64.cfg"
 elif [ "$OS" == "fedora-19-64" ] ; then
-        LOCATION="http://mirror.i3d.net/pub/fedora/linux/releases/19/Fedora/x86_64/os/"
+        LOCATION="http://mirror.i3d.net/pub/fedora/linux/releases/25/Server/x86_64/os/"
         EXTRA_ARGS="ks=http://ostolc.org/pxe/fedora-19-64.cfg"
 elif [ "$OS" == "ubuntu-12.04-64" ] ; then
         LOCATION="http://archive.ubuntu.com/ubuntu/dists/precise/main/installer-amd64/"
