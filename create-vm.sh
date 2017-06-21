@@ -5,7 +5,7 @@ if [ $# -ne 5 ] ; then
 	echo "  Where OS is one of the following"
 	echo "    centos-6.5-64"
 	echo "    fedora-19-64"
-	echo "    ubuntu-12.04-64"
+	echo "    ubuntu-14.04-1"
 	echo "    debian-7.1-64"
 	exit 1
 fi
@@ -22,9 +22,9 @@ if [ "$OS" == "centos-6.5-64" ] ; then
 elif [ "$OS" == "fedora-19-64" ] ; then
         LOCATION="http://mirror.i3d.net/pub/fedora/linux/releases/25/Server/x86_64/os/"
         EXTRA_ARGS="ks=http://ostolc.org/pxe/fedora-19-64.cfg"
-elif [ "$OS" == "ubuntu-12.04-64" ] ; then
+elif [ "$OS" == "ubuntu-14.04-1" ] ; then
         LOCATION="http://archive.ubuntu.com/ubuntu/dists/precise/main/installer-amd64/"
-        EXTRA_ARGS="auto=true interface=eth0 hostname=ubuntu1204 url=https://github.com/QubeTechPortal/Scripts/blob/master/pressed.cfg"
+        EXTRA_ARGS="auto=true interface=eth0 hostname=kvm1 url=https://github.com/QubeTechPortal/Scripts/edit/master/oldPreseed.cfg"
 elif [ "$OS" == "debian-7.1-64" ] ; then
         LOCATION="http://ftp.debian.org/debian/dists/Debian7.1/main/installer-amd64/"
         EXTRA_ARGS="auto=true interface=eth0 hostname=debian71 domain=localdomain url=http://ostolc.org/pxe/debian-7.1-64.cfg"
