@@ -23,8 +23,8 @@ elif [ "$OS" == "fedora-19-64" ] ; then
         LOCATION="http://mirror.i3d.net/pub/fedora/linux/releases/25/Server/x86_64/os/"
         EXTRA_ARGS="ks=http://ostolc.org/pxe/fedora-19-64.cfg"
 elif [ "$OS" == "ubuntu-14.04-1" ] ; then
-        LOCATION="http://archive.ubuntu.com/ubuntu/dists/precise/main/installer-amd64/"
-        EXTRA_ARGS="auto=true interface=eth0 hostname=kvm1 url=https://github.com/QubeTechPortal/Scripts/edit/master/oldPreseed.cfg"
+        LOCATION="/var/lib/libvirt/boot/ubuntu-14.04.1-server-amd64.iso"
+        EXTRA_ARGS="auto=true interface=eth0 hostname=kvm1 url=/srv/ftp/oldPreseed.cfg"
 elif [ "$OS" == "debian-7.1-64" ] ; then
         LOCATION="http://ftp.debian.org/debian/dists/Debian7.1/main/installer-amd64/"
         EXTRA_ARGS="auto=true interface=eth0 hostname=debian71 domain=localdomain url=http://ostolc.org/pxe/debian-7.1-64.cfg"
@@ -42,6 +42,7 @@ virt-install                            \
         --ram $RAM_MB                   \
         --disk path=/var/lib/libvirt/images/$NAME.qcow2,format=qcow2,size=$DISK_GB	\
         --network bridge=br0            \
+	#--cdrom=/var/lib/libvirt/boot/CentOS-7-x86_64-Minima \
         --vcpus $VCPUS                  \
         --graphics vnc                  \
         --noautoconsole                 \
