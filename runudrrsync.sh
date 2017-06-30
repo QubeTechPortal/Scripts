@@ -1,3 +1,3 @@
-udr -v -c /remote/server/path/to/udr rsync -avz --delete hostname:/src /dest
 
-# udr -vc /home/itsupport/UDR/src/udr rsync -avc --progress 172.16.2.28:/home/itsupport/source/ /home/itsupport/backup/
+# Command in ubolt
+# /home/itsupport/UDR/src/udr -vc /var/udp-rsync/UDR/src/udr rsync -rvP --size-only --bwlimit=100000 /srv/ftp username@remoteIP:/destination/path 
