@@ -15,10 +15,10 @@ iface lo inet loopback
 # The primary network interface
 auto em1
 iface em1 inet static
-    address $ip
-    netmask $netmask
-    gateway $gateway
-    dns-nameservers 192.168.4.12
+address $ip
+netmask $netmask
+gateway $gateway
+dns-nameservers 192.168.4.12
 
 EOF
 
